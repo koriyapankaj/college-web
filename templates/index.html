@@ -1,6 +1,7 @@
 
 {% extends 'base.html' %}
 
+
 {% block content %}
     <!-- slider start -->
 
@@ -41,43 +42,26 @@
 
     <!-- card start -->
 
+
     <div class="container mb-5">
 
       <div class="row">
-     
+
+    {% for x in gallery_obj%}
+             
             <div class="col">
               <div class="card" style="width: 18rem;">
-                <img src="/static/img/n-1.jpg" class="card-img-top" alt="...">
+                <img src="{{ x.g_image.url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">{{ x.g_title }}</h5>
+                  <p class="card-text">{{ x.g_disc }}</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
             </div>
 
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img src="/static/img/n-1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img src="/static/img/n-1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-       
+    {% endfor %}
+   
       </div>
         
     </div>
