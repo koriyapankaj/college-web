@@ -3,19 +3,18 @@
 
 {% block content %}
 
-    <h1 class="text-center mt-5 mb-5">Course</h1>
+
+    <h1 class="text-center mt-5 mb-5">{{ c_obj.course_name }}</h1>
 
         <!-- image -->
 
-        <img src="/static/img/n-3.png" class="rounded mx-auto d-block" alt="...">
+        <img src="{{ c_obj.c_image.url }}" class="rounded mx-auto d-block" alt="...">
 
         <!-- image -->
     
     
     <p class="container mt-5 mb-5">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum modi, cumque optio sequi consequuntur 
-      neque deserunt, fugit facere illo atque hic,
-      laudantium alias totam eaque. Voluptas accusantium cupiditate harum officiis!
+        {{ c_obj.c_disc }}
     </p>
 
 
